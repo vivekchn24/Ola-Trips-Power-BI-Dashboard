@@ -1,0 +1,37 @@
+1) For Gauge Chart:
+-Right cick on the trips_details
+-Select New measure
+-write the following formula in the formula bar above
+conversion_rate = SUM(trip_details[end_ride])/SUM(trip_details[searches])
+-As you can see that a new column with the name conversion_rate had been added in the data
+-Now select the Gauge chart & sleect the conversion_rate mesaure.
+
+
+
+2) For the Data Table we are going to present
+we need to create table with following columns (Assembly,Searches, Searches_got_estimates,searches_got_quotes,distance, fare, conversion_rate)
+For this we need to merge more than 2 tables
+
+So basically we are joining one table from the another table as shown below 
+
+-First of all we need to make a new table by using merge queries on assembly & trips table
+-First of all right click on the data & open power query window
+-Now go to merge queries & select "merger queries as new" option.
+-After that select "trip_details" in the first table & "assembly" in the second table
+-Now select "loc_from" column in trip_details table & "id" column in assembly table
+-Click on "Ok", you can see that a new table had been formed named "Merge1"
+-now in the last you can see there are 2 columns, open up both the columns as we do normally inmerge queries 
+(IMP SELECT BOTH THE COLUMNS, ID & ASSEMBLY)
+
+Now we are making again a new table with this merged table
+-Now go to merge queries & select "merger queries as new" option.
+-After that select "Merge1" in the first table & "trips" in the second table
+-Select "tripid" column in both the table
+-Click on "Ok", you can see that a new table had been formed named "Merge2"
+-now in the last you can see there are new columns added, open up/expand all the columns as.
+(IMP EXPAND ALL THE COLUMNS)
+
+-After all of this don't forget to close & apply
+-Now select the Table visual & fill the data from table "Merge2" as shown below
+
+
