@@ -19,7 +19,7 @@ This project visualizes key insights from Ola trips using Power BI.
 - Data Cleaning in Power Query
 - Excel For Data-Understanding
 
-- Repsitory Contains
+## Repsitory Contains
 - Screenshots
 - Ola-Trips-CSV File
 - Real-Screenshots
